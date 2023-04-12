@@ -127,6 +127,7 @@ public class Constants {
     public static final String URL_REPORT_ORDER = ROOT_URL+"postTeamleaderOrder.php";
     public static final String URL_REPORT_DELIVERY = ROOT_URL+"postTeamleaderDelivery.php";
     public static final String URL_REPORT_BA = ROOT_URL+"postBa.php";
+    public static final String URL_MY_PRODUCTS = ROOT_URL+"Products.php?clickeditem=";
 
 
 

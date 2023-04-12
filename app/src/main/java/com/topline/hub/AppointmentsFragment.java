@@ -24,7 +24,7 @@ public class AppointmentsFragment extends Fragment {
     //CardView newAppointments,tasks, follow;
     CardView lnCare, lnMental,lnNutrition,lnLife, lnSoS, lnActivity, lnCoach;
     Button btnNew;
-    LinearLayout support, request, sos, history, notice;
+    LinearLayout support, request, sos, history, notice, orders;
     TextView user_name, user_phone, user_role, user_team,activity,txtDate;
 
     @Override
@@ -39,6 +39,7 @@ public class AppointmentsFragment extends Fragment {
         support = (LinearLayout) v.findViewById(R.id.support);
         sos = (LinearLayout) v.findViewById(R.id.sos);
         history = (LinearLayout) v.findViewById(R.id.history);
+        orders = (LinearLayout) v.findViewById(R.id.orders);
         notice = (LinearLayout) v.findViewById(R.id.notice);
 
 
@@ -125,6 +126,15 @@ public class AppointmentsFragment extends Fragment {
             public void onClick(View v) {
 
                 startActivity(new Intent(act, AppointmentsActivity.class));
+
+            }
+        });
+
+        orders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(act, Shop.class));
 
             }
         });

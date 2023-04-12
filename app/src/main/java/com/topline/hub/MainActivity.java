@@ -297,7 +297,7 @@ public class MainActivity extends AppCompatActivity {
 
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
-        setFragment(new AppointmentsFragment());
+        setFragment(new ProductsFragment());
 
         //myBundle();
 
