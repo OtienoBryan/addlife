@@ -39,8 +39,8 @@
 
                     <ImageView
                         android:id="@+id/image"
-                        android:layout_width="250dp"
-                        android:layout_height="250dp"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
                         android:src="@drawable/food" />
 
                     <LinearLayout
@@ -119,15 +119,6 @@
                                 android:textSize="20.0sp" />
                         </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/abv"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:gravity="right"
-                            android:text="ABV"
-                            android:textColor="@color/red"
-                            android:textStyle="italic" />
 
                         <!--                <androidx.appcompat.widget.AppCompatButton-->
                         <!--                    android:id="@+id/saveClient"-->
@@ -259,7 +250,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_margin="4dp"
-                android:src="@drawable/food" />
+                android:src="@drawable/whatsapp" />
 
         </android.support.v7.widget.CardView>
 

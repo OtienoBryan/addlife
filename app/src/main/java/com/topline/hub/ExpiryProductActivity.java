@@ -95,7 +95,6 @@ public class ExpiryProductActivity extends AppCompatActivity {
         product_description = i.getExtras().getString("PRODUCT_DESC");
         product_usage = i.getExtras().getString("PRODUCT_USAGE");
         product_status = i.getExtras().getString("PRODUCT_STATUS");
-        product_abv = i.getExtras().getString("PRODUCT_ABV");
         product_sub = i.getExtras().getString("PRODUCT_SUB");
         product_brand = i.getExtras().getString("PRODUCT_BRAND");
         product_country = i.getExtras().getString("PRODUCT_COUNTRY");
@@ -129,7 +128,6 @@ public class ExpiryProductActivity extends AppCompatActivity {
         p_name = (TextView)findViewById(R.id.product_name);
         p_price = (TextView)findViewById(R.id.product_price);
         p_details = (TextView)findViewById(R.id.product_details);
-        abv = (TextView)findViewById(R.id.abv);
         image = (ImageView) findViewById(R.id.image);
         stock = (ImageView) findViewById(R.id.stock);
         fav = (ImageView) findViewById(R.id.fav);
@@ -157,9 +155,9 @@ public class ExpiryProductActivity extends AppCompatActivity {
 
         Glide.with(this).load(product_image).into(image);
         p_name.setText(product_name);
-        p_price.setText("Ksh. "+product_price);
-        p_details.setText(product_details);
-        abv.setText("ABV "+product_abv +"%");
+        p_price.setText("KES. "+product_price);
+        p_details.setText(product_description);
+
 
 
         cd = new ConnectionDetector(ExpiryProductActivity.this);
@@ -183,7 +181,7 @@ public class ExpiryProductActivity extends AppCompatActivity {
         cvCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String phone = "+254 723 688108";
+                String phone = "+254 790 193625";
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phone));
 
                 if (ActivityCompat.checkSelfPermission(ExpiryProductActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
