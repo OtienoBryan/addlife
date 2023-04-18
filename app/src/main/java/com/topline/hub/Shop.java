@@ -150,7 +150,8 @@ public class Shop extends AppCompatActivity {
                                         cat.getString("cat_name"),
                                         cat.getString("image"),
                                         cat.getString("price"),
-                                        cat.getString("description")
+                                        cat.getString("description"),
+                                        cat.getString("status")
                                 ));
                             }
 

@@ -55,13 +55,13 @@
                             android:layout_height="25dp"
                             android:layout_gravity="end"
                             android:layout_marginEnd="20dp"
-                            android:src="@drawable/stock_out" />
+                            android:src="@drawable/favourite" />
 
                         <ImageView
                             android:id="@+id/stock"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
-                            android:src="@drawable/stock_out"
+                            android:src="@drawable/available"
                             android:visibility="gone" />
 
                         <ImageView

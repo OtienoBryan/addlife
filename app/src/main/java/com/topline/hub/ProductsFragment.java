@@ -285,7 +285,8 @@ public class ProductsFragment extends Fragment {
                                         cat.getString("cat_name"),
                                         cat.getString("image"),
                                         cat.getString("price"),
-                                        cat.getString("description")
+                                        cat.getString("description"),
+                                        cat.getString("status")
                                         //cat.getString("catcolor_id")
 
                                 ));

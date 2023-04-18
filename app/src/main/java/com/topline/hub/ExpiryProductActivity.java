@@ -136,29 +136,27 @@ public class ExpiryProductActivity extends AppCompatActivity {
         cvWhatsApp = (CardView) findViewById(R.id.cvWhatsApp);
         cvCall = (CardView) findViewById(R.id.cvCall);
 
-        //int p_status = Integer.parseInt(product_status);
+        int p_status = Integer.parseInt(product_status);
 
-//        if(p_status == 1){
-//            stock.setVisibility(View.VISIBLE);
-//            notify.setVisibility(View.GONE);
-//            stockout.setVisibility(View.GONE);
-//            uploadReport.setVisibility(View.VISIBLE);
-//            myqty.setVisibility(View.VISIBLE);
-//        }else if(p_status == 0){
-//            stock.setVisibility(View.GONE);
-//            stockout.setVisibility(View.VISIBLE);
-//            uploadReport.setVisibility(View.GONE);
-//            myqty.setVisibility(View.GONE);
-//            notify.setVisibility(View.VISIBLE);
-//
-//        }
+        if(p_status == 1){
+            stock.setVisibility(View.VISIBLE);
+            notify.setVisibility(View.GONE);
+            stockout.setVisibility(View.GONE);
+            uploadReport.setVisibility(View.VISIBLE);
+            myqty.setVisibility(View.VISIBLE);
+        }else if(p_status == 0){
+            stock.setVisibility(View.GONE);
+            stockout.setVisibility(View.VISIBLE);
+            uploadReport.setVisibility(View.GONE);
+            myqty.setVisibility(View.GONE);
+            notify.setVisibility(View.VISIBLE);
+
+        }
 
         Glide.with(this).load(product_image).into(image);
         p_name.setText(product_name);
         p_price.setText("KES. "+product_price);
         p_details.setText(product_description);
-
-
 
         cd = new ConnectionDetector(ExpiryProductActivity.this);
 
@@ -270,7 +268,8 @@ public class ExpiryProductActivity extends AppCompatActivity {
                                         cat.getString("cat_name"),
                                         cat.getString("image"),
                                         cat.getString("price"),
-                                        cat.getString("description")
+                                        cat.getString("description"),
+                                        cat.getString("status")
                                         //cat.getString("catcolor_id")
 
                                 ));

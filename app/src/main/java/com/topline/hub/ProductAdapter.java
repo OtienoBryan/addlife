@@ -69,7 +69,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             @Override
             public void onClick(View v) {
 
-                openDetailActivity(id.toString(), cat.getCat_id(),cat.getName(), cat.getImage(),  cat.getPrice(), cat.getDescription());
+                openDetailActivity(id.toString(), cat.getCat_id(),cat.getName(), cat.getImage(),  cat.getPrice(), cat.getDescription(), cat.getStatus());
             }
         });
 
@@ -121,7 +121,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         }
     }
 
-    private void openDetailActivity(String product_id,String product_code, String product_name, String product_image, String price, String description){
+    private void openDetailActivity(String product_id,String product_code, String product_name, String product_image, String price, String description, String status){
 
         Intent i = new Intent(mCtx, ExpiryProductActivity.class);
 
@@ -132,6 +132,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         i.putExtra("PRODUCT_IMAGE", product_image);
         i.putExtra("PRODUCT_PRICE", price);
         i.putExtra("PRODUCT_DESC", description);
+        i.putExtra("PRODUCT_STATUS", status);
 
         mCtx.startActivity(i);
 

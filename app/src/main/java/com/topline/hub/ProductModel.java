@@ -10,19 +10,19 @@ public class ProductModel {
     private String image;
     private String price;
     private String description;
-
-
+    private String status;
 
     //private String catcolor_id;
 
 
-    public ProductModel(int id, String cat_id, String name, String image, String price, String description) {
+    public ProductModel(int id, String cat_id, String name, String image, String price, String description, String status) {
         this.id = id;
         this.cat_id = cat_id;
         this.name = name;
         this.image = image;
         this.price = price;
         this.description = description;
+        this.status = status;
         //this.catcolor_id = catcolor_id;
 
     }
@@ -49,6 +49,10 @@ public class ProductModel {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getStatus() {
+        return status;
     }
 
 
