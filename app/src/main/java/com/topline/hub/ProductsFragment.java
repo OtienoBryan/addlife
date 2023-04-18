@@ -120,23 +120,23 @@ public class ProductsFragment extends Fragment {
             }
         });
 
-//        orders.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                startActivity(new Intent(act, Cart.class));
-//
-//            }
-//        });
+        orders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-//        notification.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                startActivity(new Intent(act, MyOrders.class));
-//
-//            }
-//        });
+                startActivity(new Intent(act, Cart.class));
+
+            }
+        });
+
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(act, MyOrders.class));
+
+            }
+        });
 
 //        profile.setOnClickListener(new View.OnClickListener() {
 //            @Override

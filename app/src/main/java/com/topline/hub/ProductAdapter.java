@@ -73,13 +73,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             }
         });
 
-//        holder.add_cart.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                add_to_cart(id.toString(), cat.getCat_id(),cat.getName(), cat.getImage(),  cat.getPrice(), cat.getDescription(), cat.getUsage(), cat.getStatus(), cat.getAbv(), cat.getSub(), cat.getBrand(), cat.getCountry(), cat.getDetails() );
-//            }
-//        });
+        holder.add_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                add_to_cart(id.toString(), cat.getCat_id(),cat.getName(), cat.getImage(),  cat.getPrice(), cat.getDescription(), cat.getStatus());
+            }
+        });
 
 //        holder.fav.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -138,61 +138,61 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     }
 
-//    private void add_to_cart(String product_id,String product_code, String product_name, String product_image, String price, String description, String usage, String status, String abv, String sub, String brand, String country, String details){
-//
-//        final String e_quantity = "1";
-//        final String e_product_name = product_name;
-//        final String e_product_code = product_id;
-//        final String e_product_price = price;
-//        final String e_product_image = product_image;
-//
-//        final String userId = SharedPrefManager.getInstance(mCtx).getUserId().toString().trim();
-//        final String userName = SharedPrefManager.getInstance(mCtx).getUsername().trim();
-//        final String adminId = SharedPrefManager.getInstance(mCtx).getUserUnit().trim();
-//
-//
-//        StringRequest stringRequest = new StringRequest(Request.Method.POST,
-//                Constants.URL_POST_ORDER,
-//                new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//
-//                        Toast.makeText(mCtx, "Added to Cart", Toast.LENGTH_LONG).show();
-////                        startActivity(new Intent(Cart.this, Cart.class));
-////                        Cart.this.finish();
-//
-//                    }
-//                },
-//                new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//
-//                        Toast.makeText(mCtx, "Error Occurred Try again", Toast.LENGTH_LONG).show();
-//                    }
-//                }) {
-//            @Override
-//            protected Map<String, String> getParams() throws AuthFailureError {
-//                Map<String, String> params = new HashMap<>();
-//
-//                params.put("user_name", userName);
-//                params.put("user_id", userId);
-//                params.put("admin_id", adminId);
-//
-//                params.put("product_name", e_product_name);
-//                params.put("product_code", e_product_code);
-//                params.put("product_price", e_product_price);
-//                params.put("product_image", e_product_image);
-//                params.put("quantity", e_quantity);
-//
-//                return params;
-//            }
-//        };
-//
-//        RequestHandler.getInstance(mCtx).addToRequestQueue(stringRequest);
-//
-//
-//
-//    }
+    private void add_to_cart(String product_id,String product_code, String product_name, String product_image, String price, String description, String status){
+
+        final String e_quantity = "1";
+        final String e_product_name = product_name;
+        final String e_product_code = product_id;
+        final String e_product_price = price;
+        final String e_product_image = product_image;
+
+        final String userId = SharedPrefManager.getInstance(mCtx).getUserId().toString().trim();
+        final String userName = SharedPrefManager.getInstance(mCtx).getUsername().trim();
+        final String adminId = SharedPrefManager.getInstance(mCtx).getUserUnit().trim();
+
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                Constants.URL_POST_ORDER,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        Toast.makeText(mCtx, "Added to Cart", Toast.LENGTH_LONG).show();
+//                        startActivity(new Intent(Cart.this, Cart.class));
+//                        Cart.this.finish();
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                        Toast.makeText(mCtx, "Error Occurred Try again", Toast.LENGTH_LONG).show();
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+
+                params.put("user_name", userName);
+                params.put("user_id", userId);
+                params.put("admin_id", adminId);
+
+                params.put("product_name", e_product_name);
+                params.put("product_code", e_product_code);
+                params.put("product_price", e_product_price);
+                params.put("product_image", e_product_image);
+                params.put("quantity", e_quantity);
+
+                return params;
+            }
+        };
+
+        RequestHandler.getInstance(mCtx).addToRequestQueue(stringRequest);
+
+
+
+    }
 
 
 }

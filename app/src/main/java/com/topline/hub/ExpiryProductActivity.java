@@ -207,7 +207,7 @@ public class ExpiryProductActivity extends AppCompatActivity {
                     if(quantity.getText().toString().trim().equalsIgnoreCase("")){
                         Toast.makeText(ExpiryProductActivity.this, "Quantity is required", Toast.LENGTH_SHORT).show();
                     }else {
-                        //submitExpiryTracker();
+                        submitExpiryTracker();
                     }
 
                 } else {
@@ -297,63 +297,63 @@ public class ExpiryProductActivity extends AppCompatActivity {
         Volley.newRequestQueue(this).add(stringRequest);
     }
 
-//    private void submitExpiryTracker(){
-//
-//        final String e_quantity = quantity.getText().toString().trim();
-//        final String e_product_name = product_name;
-//        final String e_product_code = product_code;
-//        final String e_product_price = product_price;
-//        final String e_product_image = product_image;
-//
-//        final String userId = SharedPrefManager.getInstance(this).getUserId().toString().trim();
-//        final String userName = SharedPrefManager.getInstance(this).getUsername().trim();
-//        final String adminId = SharedPrefManager.getInstance(this).getUserUnit().trim();
-//
-//
-//        progressDialog.setMessage("Please Wait...");
-//        progressDialog.show();
-//
-//        StringRequest stringRequest = new StringRequest(Request.Method.POST,
-//                Constants.URL_POST_ORDER,
-//                new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//                        progressDialog.dismiss();
-//
-//                        Toast.makeText(ExpiryProductActivity.this, "Item Added to Cart", Toast.LENGTH_LONG).show();
-//                        startActivity(new Intent(ExpiryProductActivity.this, MainActivity.class));
-//                        ExpiryProductActivity.this.finish();
-//
-//                    }
-//                },
-//                new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                        progressDialog.hide();
-//                        Toast.makeText(ExpiryProductActivity.this, "Error Occurred Try again", Toast.LENGTH_LONG).show();
-//                    }
-//                }) {
-//            @Override
-//            protected Map<String, String> getParams() throws AuthFailureError {
-//                Map<String, String> params = new HashMap<>();
-//
-//                params.put("user_name", userName);
-//                params.put("user_id", userId);
-//                params.put("admin_id", adminId);
-//
-//                params.put("product_name", e_product_name);
-//                params.put("product_code", e_product_code);
-//                params.put("product_price", e_product_price);
-//                params.put("product_image", e_product_image);
-//                params.put("quantity", e_quantity);
-//
-//                return params;
-//            }
-//        };
-//
-//        RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
-//
-//    }
+    private void submitExpiryTracker(){
+
+        final String e_quantity = quantity.getText().toString().trim();
+        final String e_product_name = product_name;
+        final String e_product_code = product_code;
+        final String e_product_price = product_price;
+        final String e_product_image = product_image;
+
+        final String userId = SharedPrefManager.getInstance(this).getUserId().toString().trim();
+        final String userName = SharedPrefManager.getInstance(this).getUsername().trim();
+        final String adminId = SharedPrefManager.getInstance(this).getUserUnit().trim();
+
+
+        progressDialog.setMessage("Please Wait...");
+        progressDialog.show();
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                Constants.URL_POST_ORDER,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        progressDialog.dismiss();
+
+                        Toast.makeText(ExpiryProductActivity.this, "Item Added to Cart", Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(ExpiryProductActivity.this, MainActivity.class));
+                        ExpiryProductActivity.this.finish();
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        progressDialog.hide();
+                        Toast.makeText(ExpiryProductActivity.this, "Error Occurred Try again", Toast.LENGTH_LONG).show();
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+
+                params.put("user_name", userName);
+                params.put("user_id", userId);
+                params.put("admin_id", adminId);
+
+                params.put("product_name", e_product_name);
+                params.put("product_code", e_product_code);
+                params.put("product_price", e_product_price);
+                params.put("product_image", e_product_image);
+                params.put("quantity", e_quantity);
+
+                return params;
+            }
+        };
+
+        RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
+
+    }
 //    private void notify_me(){
 //
 //        final String e_quantity = quantity.getText().toString().trim();

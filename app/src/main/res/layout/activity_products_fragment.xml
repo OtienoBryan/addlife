@@ -607,7 +607,7 @@
                 android:layout_height="30dp"
                 android:scaleType="fitCenter"
                 android:layout_gravity="center"
-                android:src="@drawable/life" />
+                android:src="@drawable/home" />
             <TextView
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
@@ -629,7 +629,7 @@
                 android:layout_height="30dp"
                 android:scaleType="fitCenter"
                 android:layout_gravity="center"
-                android:src="@drawable/life" />
+                android:src="@drawable/orders" />
             <TextView
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
@@ -669,7 +669,7 @@
                 android:layout_height="30dp"
                 android:scaleType="fitCenter"
                 android:layout_gravity="center"
-                android:src="@drawable/life" />
+                android:src="@drawable/cart" />
             <TextView
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
@@ -691,7 +691,7 @@
                 android:layout_height="30dp"
                 android:scaleType="fitCenter"
                 android:layout_gravity="center"
-                android:src="@drawable/life" />
+                android:src="@drawable/user" />
             <TextView
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"

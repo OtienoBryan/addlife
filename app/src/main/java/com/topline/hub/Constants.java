@@ -112,12 +112,20 @@ public class Constants {
     public static final String URL_STOCKS = ROOT_URL+"getStockCount.php?clickeditem=";
     public static final String URL_GET_APPROVAL = ROOT_URL+"getApproval.php?team=";
     public static final String URL_POST_APPROVAL = ROOT_URL+"postApproval.php";
-
+    public static final String URL_CART = ROOT_URL+"cart.php?clickeditem=";
+    public static final String URL_ADD_QUANTITY = ROOT_URL+"item_add.php";
+    public static final String URL_SUBTRACT_QUANTITY = ROOT_URL+"item_subtract.php";
+    public static final String URL_POST_ORDER_DELETE = ROOT_URL+"item_deletes.php";
+    public static final String URL_POST_CHECKOUT = ROOT_URL+"checkoutReport.php";
+    public static final String URL_COMPLETE = ROOT_URL+"complete.php?clickeditem=";
+    public static final String URL_COMPLETE_ORDER = ROOT_URL+"confirm_complete.php";
+    public static final String URL_ORDERS = ROOT_URL+"my_orders.php?clickeditem=";
 
     //APis by Bryan Otieno
     public static final String URL_ORDER = ROOT_URL+"postOrder.php";
     public static final String URL_DELIVERY = ROOT_URL+"postDelivery.php";
     public static final String URL_FOLLOWUP = ROOT_URL+"postFollowupAppointment.php";
+    public static final String URL_POST_ORDER = ROOT_URL+"product_expiryReport.php";
     public static final String URL_OBJECTIVE = ROOT_URL+"postObjective.php";
     public static final String URL_COACHING= ROOT_URL+"postCoaching.php";
     public static final String URL_MPA_PRODUCTS = ROOT_URL+"getMpa.php";
